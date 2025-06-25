@@ -1,0 +1,11 @@
+aliases:
+  dp: deployments
+  sec: v1/secrets
+  jo: jobs
+  j: jobs
+  cj: cronjobs
+  cr: clusterroles
+  crb: clusterrolebindings
+  ro: roles
+  rb: rolebindings
+  np: networkpolicies
