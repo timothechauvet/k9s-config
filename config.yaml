@@ -1,3 +1,4 @@
+---
 k9s:
   liveViewAutoRefresh: false
   screenDumpDir: /Users/lumache/Library/Application Support/k9s/screen-dumps
@@ -5,6 +6,7 @@ k9s:
   maxConnRetry: 5
   readOnly: false
   noExitOnCtrlC: false
+  defaultView: pods
   portForwardAddress: localhost
   ui:
     enableMouse: false
@@ -14,7 +16,7 @@ k9s:
     reactive: true
     noIcons: false
     defaultsToFullScreen: false
-    skin: gruvbox-dark-hard
+    skin: monokai
   skipLatestRevCheck: false
   disablePodCounting: false
   shellPod:
