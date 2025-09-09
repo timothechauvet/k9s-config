@@ -16,3 +16,30 @@ views:
       - '%MEM/L'
       - IP
       - NODE
+      - IMAGE:.spec.containers[0].image
+  apps/v1/deployments:
+    sortColumn: NAME:asc
+    columns:
+      - NAME
+      - READY
+      - UP-TO-DATE
+      - AVAILABLE
+      - AGE
+      - IMAGE:.spec.template.spec.containers[0].image
+  apps/v1/statefulsets:
+    sortColumn: NAME:asc
+    columns:
+      - NAME
+      - READY
+      - SERVICE
+      - AGE
+      - IMAGE:.spec.template.spec.containers[0].image
+  apps/v1/replicasets:
+    sortColumn: NAME:asc
+    columns:
+      - NAME
+      - DESIRED
+      - CURRENT
+      - READY
+      - AGE
+      - IMAGE:.spec.template.spec.containers[0].image
