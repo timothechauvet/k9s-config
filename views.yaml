@@ -3,10 +3,9 @@ views:
     sortColumn: NAME:asc
     columns:
       - NAME
-      - PF
       - READY
       - STATUS
-      - RESTARTS
+      - RS:.status.containerStatuses[0].restartCount
       - AGE
       - CPU
       - MEM
@@ -17,6 +16,8 @@ views:
       - IP
       - NODE
       - IMAGE:.spec.containers[0].image
+      - PF
+      - RESTARTS
   apps/v1/deployments:
     sortColumn: NAME:asc
     columns:
