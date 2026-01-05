@@ -25,6 +25,9 @@ views:
       - READY
       - UP-TO-DATE
       - AVAILABLE
+      - MEMLMT:.spec.template.spec.containers[0].resources.limits.memory
+      - MEMRQ:.spec.template.spec.containers[0].resources.requests.memory
+      - CPURQ:.spec.template.spec.containers[0].resources.requests.cpu
       - AGE
       - IMAGE:.spec.template.spec.containers[0].image
   apps/v1/statefulsets:
