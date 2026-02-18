@@ -16,6 +16,7 @@ views:
       - IP
       - NODE
       - IMAGE:.spec.containers[0].image
+      - IMAGE:.spec.containerStatuses[0].imageID
       - PF
       - RESTARTS
   apps/v1/deployments:
@@ -27,6 +28,7 @@ views:
       - AVAILABLE
       - MEMLMT:.spec.template.spec.containers[0].resources.limits.memory
       - MEMRQ:.spec.template.spec.containers[0].resources.requests.memory
+      - CPULMT:.spec.template.spec.containers[0].resources.limits.cpu
       - CPURQ:.spec.template.spec.containers[0].resources.requests.cpu
       - AGE
       - IMAGE:.spec.template.spec.containers[0].image
